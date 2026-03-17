@@ -22,7 +22,7 @@ abstract class AbstractArchiver implements ArchiverInterface
      */
     protected function getCompressionLevel(array $options): CompressionLevel
     {
-        return $options['level'] instanceof CompressionLevel ? $options['level'] : CompressionLevel::Normal;
+        return isset($options['level']) && $options['level'] instanceof CompressionLevel ? $options['level'] : CompressionLevel::Normal;
     }
 
     /**

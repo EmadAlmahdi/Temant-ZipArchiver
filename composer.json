@@ -1,11 +1,31 @@
 {
-    "name": "temant/zip-archiver", 
+    "name": "temant/archiver",
+    "description": "A general-purpose compression/decompression library supporting ZIP, TAR, GZ, BZ2, RAR and more",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["archive", "zip", "tar", "gzip", "bzip2", "rar", "compression", "decompression"],
     "autoload": {
         "psr-4": {
-            "Temant\\ZipArchiver\\": "Src/"
+            "Temant\\Archiver\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Temant\\Archiver\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^8.1",
+        "ext-phar": "*"
+    },
+    "suggest": {
+        "ext-zip": "Required for ZIP format support",
+        "ext-zlib": "Required for GZIP and TAR.GZ format support",
+        "ext-bz2": "Required for BZIP2 and TAR.BZ2 format support",
+        "ext-rar": "Required for RAR format decompression"
+    },
     "require-dev": {
-        "phpstan/phpstan": "^2.1"
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^13.0"
     }
 }

@@ -155,6 +155,10 @@ class GzipArchiver extends AbstractArchiver
 
     public function verify(string $archive): bool
     {
+        if (!file_exists($archive)) {
+            return false;
+        }
+
         $input = gzopen($archive, 'rb');
         if ($input === false) {
             return false;
