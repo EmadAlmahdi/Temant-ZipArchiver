@@ -1,0 +1,7 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Temant\Archiver\Exception;
+
+class CompressionException extends ArchiverException {}
