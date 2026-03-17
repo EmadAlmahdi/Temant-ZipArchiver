@@ -1,12 +1,11 @@
 {
-    "name": "temant/zip-archiver",
-    "version": "1.0.0",
+    "name": "temant/zip-archiver", 
     "autoload": {
         "psr-4": {
             "Temant\\ZipArchiver\\": "Src/"
         }
     },
     "require-dev": {
-        "phpstan/phpstan": "*"
+        "phpstan/phpstan": "^2.1"
     }
 }
